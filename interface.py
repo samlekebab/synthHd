@@ -1,3 +1,4 @@
+#!/bin/python
 ###
 from threading import Timer
 import serial
@@ -10,7 +11,7 @@ from PySide6.QtWidgets import (QApplication, QLabel, QPushButton,
                                QSlider,QDoubleSpinBox,QCheckBox)
 #from __feature__ import 
 ##
-debug=0b1
+debug=0b0
 ##type of widget definition
 SLIDER=0
 BUTTON_BOOL=1
@@ -312,7 +313,7 @@ class EOM_control():
 ###     
 app = QApplication(sys.argv)
 ###
-eom = EOM_control("/dev/ttyACM0")
+eom = EOM_control("/dev/ttyACM1")
 #eom.setPower(15)
 #eom.disable()
 #eom.enable()
